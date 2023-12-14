@@ -1,0 +1,147 @@
+.cart {
+    width: 100%;
+    height: 75vh;
+    padding: 0 $p_lg;
+    margin: 2rem auto;
+
+    >div {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+
+        >p {
+            font: 500 1rem $text;
+            padding: 10px;
+            text-align: center
+        }
+    }
+
+    >section {
+        width: 100%;
+
+        >div {
+            display: flex;
+            margin: 1rem 0;
+
+            >.prod_data {
+                display: flex;
+                gap: 15px;
+                align-items: center;
+                width: 23%;
+
+                >img {
+                    width: 4rem;
+                    height: 3rem;
+                    object-fit: contain;
+                }
+
+                >aside {
+                    margin: 5px 0;
+
+                    >span {
+                        font-weight: 500;
+                        text-transform: capitalize;
+                    }
+
+                    >div {
+                        display: flex;
+                        font-size: 15px;
+                        font-weight: 500;
+                        align-items: center;
+
+                        >p {
+                            border: none;
+                            outline: none;
+                            border-radius: 50%;
+                            width: 13px;
+                            height: 13px;
+                            margin-left: 5px;
+                        }
+                    }
+                }
+            }
+
+            >.price {
+
+                width: 18%;
+                display: grid;
+                place-items: center;
+                font-weight: 500;
+            }
+
+            >.cartToggle {
+
+                display: grid;
+                place-items: center;
+                width: 20%;
+            }
+
+            >.button {
+                display: grid;
+                place-items: center;
+                width: 20%;
+
+                >svg {
+                    font-size: 1.5rem;
+                    cursor: pointer;
+                    transition: all 0.3s;
+                    color: red;
+
+                    &:hover {
+                        transform: scale(1.2);
+                    }
+                }
+            }
+        }
+
+        >.two-btns {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+
+            >a>button {
+                width: 12rem;
+                padding: 0.5rem 1rem;
+            }
+
+            >button {
+                background-color: red;
+                width: 10rem;
+
+                &:hover {
+                    border: 2px solid red;
+                    color: red;
+                    background-color: transparent;
+                    transform: scale(1);
+                }
+            }
+        }
+
+        >.total {
+            display: flex;
+            width: 33%;
+            border-radius: 5px;
+            gap: 10px;
+            flex-direction: column;
+            margin-left: 67%;
+            background-color: rgb(243, 243, 243);
+            margin-top: 3rem;
+            padding: 2rem;
+
+            >p>span {
+                font-weight: 600;
+            }
+        }
+    }
+}
+
+.noData {
+    width: 100%;
+    height: 50vh;
+    display: grid;
+    place-items: center;
+
+    >h3 {
+        font: 400 3rem $text;
+        text-transform: uppercase;
+    }
+}

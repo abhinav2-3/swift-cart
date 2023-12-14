@@ -1,0 +1,50 @@
+.products {
+    margin: 2rem 0;
+    // border: 1px solid red;
+    width: 100%;
+
+    display: flex;
+    padding: 0 $p_lg;
+
+    .container {
+        // border: 1px solid red;
+        width: 80%;
+        height: 100%;
+
+        .top-bar {
+            // border: 1px solid red;
+            width: 100%;
+            height: 10vh;
+
+            >.sorting {
+                display: flex;
+                width: 100%;
+                justify-content: space-around;
+
+                >form>select {
+                    border: 1px solid $black;
+                    outline: none;
+                    width: 8rem;
+                    padding: 5px;
+                    font-size: 0.9rem;
+                    font-weight: 500;
+                }
+            }
+        }
+
+        .main {
+            width: 100%;
+            height: 100%;
+
+            >.productList {
+                width: 100%;
+                height: 100%;
+                display: flex;
+                gap: 2rem;
+                flex-flow: wrap;
+                justify-content: space-between;
+
+            }
+        }
+    }
+}

@@ -1,0 +1,50 @@
+$light: #F3F3F3;
+$white: #ffffff;
+$black: #000000;
+$primary: #192655;
+$secondary: #3876BF;
+
+$p_lg: 8rem;
+
+
+$text: "Work Sans";
+
+.btn {
+    background-color: $secondary;
+    color: $white;
+    width: 9rem;
+    height: 3rem;
+    margin-top: 0;
+    border: none;
+    outline: none;
+    border-radius: 3px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    padding: 0.8rem 1.3rem;
+    transition: all 0.3s;
+    text-transform: uppercase;
+
+    &:hover {
+        background-color: #17477e;
+        cursor: pointer;
+        transform: scale(1.1);
+    }
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+    transition: all 0.4s;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: $secondary;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: $primary;
+    border-radius: 50px;
+}
+
+::-webkit-scrollbar-track {
+    background: transparent;
+}

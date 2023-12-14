@@ -1,0 +1,103 @@
+.myImages {
+    width: 100%;
+    height: 100%;
+    // border: 1px solid black;
+    display: flex;
+
+    >div {
+        // border: 1px solid black;
+        display: flex;
+        width: 30%;
+        flex-direction: column;
+        justify-content: center;
+        height: 100%;
+
+        >figure>img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            cursor: pointer;
+        }
+    }
+
+    >aside {
+        width: 70%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        >img {
+            width: 85%;
+            height: 32vh;
+            object-fit: contain;
+        }
+    }
+}
+
+.ratingStar {
+    display: flex;
+
+    >span>svg {
+        color: rgb(255, 155, 4);
+        font-size: 1.1rem;
+    }
+
+    >p {
+        margin-left: 1.5rem;
+    }
+}
+
+.colors_container {
+    display: flex;
+    justify-content: start;
+
+    >.buttonStyle {
+        border: none;
+        outline: none;
+        border-radius: 50%;
+        width: 1rem;
+        height: 1rem;
+        margin-left: 10px;
+        opacity: 0.5;
+        cursor: pointer;
+
+        &:hover {
+            opacity: 1;
+        }
+
+        >svg {
+            margin-top: 2px;
+            font-size: 0.8rem;
+        }
+    }
+
+    .active {
+        opacity: 1;
+    }
+
+
+}
+
+.qty {
+    margin-left: 1rem;
+    display: flex;
+    height: 5vh;
+
+    >span {
+        font-size: 1.5rem;
+        width: 2rem;
+        margin-left: 1rem;
+    }
+
+    >button {
+        border: none;
+        outline: none;
+        font-size: 1rem;
+        background: transparent;
+
+        &:hover {
+            cursor: pointer;
+        }
+    }
+}

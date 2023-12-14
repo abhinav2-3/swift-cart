@@ -1,0 +1,39 @@
+.contact {
+    width: 100%;
+    padding-inline: $p_lg;
+    margin: 4rem 0;
+    // border: 1px solid red;
+
+    >div {
+        display: flex;
+        flex-direction: column;
+        gap: 3rem;
+        width: 100%;
+        align-items: center;
+
+        >h1 {
+            font: 600 1.8rem $text;
+        }
+
+        >div {
+            padding: 0;
+        }
+
+        >form {
+            display: flex;
+            width: 40%;
+            flex-direction: column;
+            gap: 2rem;
+
+            >input,
+            textarea {
+                border: 2px solid rgb(158, 158, 158);
+                outline: none;
+                padding: 1rem;
+                border-radius: 5px;
+                font-size: 1rem;
+                font-weight: 500;
+            }
+        }
+    }
+}
