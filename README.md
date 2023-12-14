@@ -1,3 +1,36 @@
+# SwiftCart - Ecommerce Website
+
+SwiftCart is a full-fledged ecommerce website developed using React.js, inspired by platforms like Amazon and Flipkart. It comes with features like sorting, various types of filters, a search bar, and a fully functional shopping cart. The project utilizes Context API and a reducer for state management.
+
+## Live Demo
+
+Check out the live demo: [SwiftCart Demo](https://switcart.vercel.app)
+
+## Features
+
+- **Sorting:** Arrange products based on different criteria such as price, popularity, etc.
+- **Filters:** Apply various filters to narrow down the product selection.
+- **Search Bar:** Quickly find products using the search functionality.
+- **Add to Cart:** Seamless shopping experience with an intuitive shopping cart feature.
+- **Single Product :** Single Product page which show only one product all details.
+
+## Technologies Used
+
+- React.js
+- Context API
+- Reducer
+- HTML5 and SCSS
+- Javascript
+
+## Getting Started
+
+Follow these steps to set up and run the project locally:
+
+1. Clone the repository:
+
+   ```bash
+   git clone https://github.com/your-username/swiftcart.git
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
