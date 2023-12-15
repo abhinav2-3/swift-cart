@@ -4,8 +4,10 @@ import CartAmountToggle from "../compoenents/CartAmountToggle";
 import { useCartContext } from "../context/CartContext";
 import FormatPrice from "../compoenents/FormatPrice";
 import { MdDelete } from "react-icons/md";
+import { useAuth0 } from "@auth0/auth0-react";
 
 const Cart = () => {
+  const { isAuthenticated, user } = useAuth0();
   const {
     cart,
     removeProduct,
@@ -19,7 +21,13 @@ const Cart = () => {
   if (cart.length > 0) {
     return (
       <section className="cart">
-        <div>
+        {isAuthenticated && (
+          <div className="user-detail">
+            <img src={user.picture} alt={user.name} />
+            <h2>{user.name}</h2>
+          </div>
+        )}
+        <div className="table">
           <p>Item</p>
           <p>Price</p>
           <p>Quantity</p>

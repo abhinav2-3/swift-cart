@@ -30,7 +30,6 @@ const SingleProduct = () => {
     reviews,
   } = singleProduct;
 
-  console.log(price);
   useEffect(() => {
     getSingleProduct(`${API}?id=${id}`);
   }, []);

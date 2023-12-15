@@ -1,16 +1,12 @@
 import React, { useState } from "react";
-import PropTypes from "prop-types";
 import { FaCheck } from "react-icons/fa";
 import CartAmountToggle from "./CartAmountToggle";
 import { useCartContext } from "../context/CartContext";
 
 const AddToCart = ({ product }) => {
-  const id = product.id;
+  const { id, colors, stock } = product;
 
-  const colorsArray = product && product.colors ? product.colors : [];
-  const initialColor = product.colors ? product.colors[0] : null;
-
-  const [color, setColor] = useState(initialColor);
+  const [color, setColor] = useState(colors[0]);
   const [amount, setAmount] = useState(1);
 
   const decrement = () => {
@@ -18,7 +14,7 @@ const AddToCart = ({ product }) => {
   };
 
   const increment = () => {
-    amount < product.stock ? setAmount(amount + 1) : setAmount(product.stock);
+    amount < stock ? setAmount(amount + 1) : setAmount(stock);
   };
 
   const { addToCart } = useCartContext();
@@ -26,7 +22,7 @@ const AddToCart = ({ product }) => {
   return (
     <>
       <div className="colors_container">
-        {colorsArray.map((currColor, index) => (
+        {colors.map((currColor, index) => (
           <button
             key={index}
             className={
@@ -52,14 +48,6 @@ const AddToCart = ({ product }) => {
       </button>
     </>
   );
-};
-
-AddToCart.propTypes = {
-  product: PropTypes.shape({
-    id: PropTypes.string.isRequired,
-    stock: PropTypes.number.isRequired,
-    colors: PropTypes.arrayOf(PropTypes.string).isRequired,
-  }).isRequired,
 };
 
 export default AddToCart;
