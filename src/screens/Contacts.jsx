@@ -1,6 +1,8 @@
 /* eslint-disable jsx-a11y/iframe-has-title */
+import { useAuth0 } from "@auth0/auth0-react";
 import React from "react";
 const Contacts = () => {
+  const { isAuthenticated, user } = useAuth0();
   return (
     <section className="contact">
       <div>
@@ -17,8 +19,18 @@ const Contacts = () => {
           ></iframe>
         </div>
         <form action="https://formspree.io/f/xeqbbenl" method="POST">
-          <input type="text" name="Username" placeholder="UserName" />
-          <input type="email" name="Email" placeholder="example@gmail.com" />
+          <input
+            type="text"
+            name="Username"
+            placeholder="UserName"
+            value={isAuthenticated ? user.name : ""}
+          />
+          <input
+            type="email"
+            name="Email"
+            placeholder="example@gmail.com"
+            value={isAuthenticated ? user.email : ""}
+          />
           <textarea
             cols="30"
             rows="6"

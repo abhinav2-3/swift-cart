@@ -16,7 +16,7 @@ nav {
     >div {
         display: flex;
         // border: 1px solid red;
-        width: 30vw;
+        width: 45vw;
         height: 2rem;
         justify-content: space-between;
         align-items: center;
@@ -39,13 +39,17 @@ nav {
                 position: absolute;
                 top: -11px;
                 right: -12px;
-                background-color: red;
+                background-color: $secondary;
                 color: $white;
                 border-radius: 50%;
                 padding: 4px 8px;
                 font-size: 12px;
                 font-weight: bold;
             }
+        }
+
+        >.btn {
+            width: 7rem;
         }
     }
 }

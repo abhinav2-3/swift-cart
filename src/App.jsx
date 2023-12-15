@@ -9,6 +9,7 @@ import SingleProduct from "./compoenents/SingleProduct";
 import ErrorPage from "./compoenents/ErrorPage";
 import Footer from "./compoenents/Footer";
 import "./styles/App.scss";
+import PrivateComponent from "./compoenents/PrivateComponent";
 
 function App() {
   return (
@@ -16,11 +17,13 @@ function App() {
       <Header />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/products" element={<Products />} />
-        <Route path="/contact" element={<Contacts />} />
-        <Route path="/cart" element={<Cart />} />
-        <Route path="/singleProduct/:id" element={<SingleProduct />} />
+        <Route element={<PrivateComponent />}>
+          <Route path="/about" element={<About />} />
+          <Route path="/products" element={<Products />} />
+          <Route path="/contact" element={<Contacts />} />
+          <Route path="/cart" element={<Cart />} />
+          <Route path="/singleProduct/:id" element={<SingleProduct />} />
+        </Route>
         <Route path="*" element={<ErrorPage />} />
       </Routes>
       <Footer />
